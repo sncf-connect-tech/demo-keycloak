@@ -1,0 +1,22 @@
+# Mark the commands below to be run as a batch
+batch
+
+# install https listener
+/core-service=management/security-realm=UndertowRealm:add()
+/core-service=management/security-realm=UndertowRealm/server-identity=ssl:add(keystore-path=keycloak.jks, keystore-relative-to=jboss.server.config.dir, keystore-password=secret)
+/subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=UndertowRealm)
+/subsystem=undertow/server=default-server/http-listener=default:write-attribute(name=proxy-address-forwarding, value=true)
+
+#install modules
+module add --name=com.vsct.keycloak.federation-provider-test --resources=D:\Workspaces-idea\poc-keycloak-sncfconnect\AccountFederationProvider\target\AccountFederationProvider-1.0-SNAPSHOT-jar-with-dependencies.jar --dependencies=org.keycloak.keycloak-core,org.keycloak.keycloak-server-spi,javax.api,org.jboss.logging
+/subsystem=keycloak-server:write-attribute(name=providers, value=["module:com.vsct.keycloak.federation-provider-test"])
+
+#install logger VSCT
+/subsystem=logging/file-handler=VSCT:add(file={"path"=>"vsct.log", "relative-to"=>"jboss.server.log.dir"})
+/subsystem=logging/logger=com.vsct:add()
+/subsystem=logging/logger=com.vsct:write-attribute(name="use-parent-handlers", value="false")
+/subsystem=logging/logger=com.vsct:write-attribute(name="level", value="ALL")
+/subsystem=logging/logger=com.vsct:write-attribute(name="handlers", value=[VSCT])
+
+# Execute the batch
+run-batch

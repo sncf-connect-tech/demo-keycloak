@@ -1,0 +1,15 @@
+{
+    "name": "vsc-partner",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "~4.13.x",
+        "express-validator": "~2.x",
+        "body-parser": "~1.x.x",
+        "request": "~2.x.x",
+        "q": "~1.x.x",
+        "moment": "~2.x.x"
+    }
+}

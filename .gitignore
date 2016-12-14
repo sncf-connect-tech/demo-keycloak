@@ -1,0 +1,15 @@
+.idea/
+*.iml
+vagrant/.vagrant/
+AccountFederationProvider/target/
+vagrant/Executing
+vagrant/Waiting
+vagrant/Starting
+vagrant/Shutting
+vagrant/nginx/logs/
+install/Executing
+install/keycloak-2.3.0.Final/
+install/Shutting
+install/Starting
+install/Waiting
+install/nginx/logs/

@@ -1,0 +1,16 @@
+{
+  "name": "vsc-france",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~4.13.x",
+    "express-validator": "~2.x",
+    "pug": "2.0.0-beta3",
+    "body-parser": "~1.x.x",
+    "request": "~2.x.x",
+    "q": "~1.x.x",
+    "moment": "~2.x.x"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "VSC",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzV3YXB/JF8SsJfbv5h15k2uXezGOla4slsFMMfsFnCiO8yOZzdscWQ7TlIHFzbC+Oxrp28vQ8NYv/KYCnfzgl6l9Kl7sDcPhPSl9YwPQy9NquV2ezZ7uOpAxRihZqPhvUdf42E3fb0C6FAwaAcduUdyjTKhfDy5T2FmVblFKu08vSroFv04JPqXV9qp1ivCl/IOofOKy88pRwztDA4eCI5BszqlujLpOmw+okexIYmqJMXobAmY0z4r7becDqYeO14kiBkt9nXHAm0RAPmNGl1jCn4GqO1Y+IRYZONlWzk1queEc5my1o5y9pvBd6wjFettXFCZQrc363kI2JOTSBQIDAQAB",
+  "bearer-only": true,
+  "auth-server-url": "https://connect.voyages-sncf.com/auth",
+  "ssl-required": "external",
+  "resource": "customer-api"
+}
